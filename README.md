@@ -2,11 +2,11 @@
 
 The newest executive roles at America's Fortune 500, from the toolbar. Four tabs: Open, New today, New this week and Just filled. Click a card to open the role, or open the full list on Boardroomlist.com.
 
-Works in Chrome, Microsoft Edge and Firefox. This is the full source of the extension published for Boardroomlist.com.
+Works in Chrome, Microsoft Edge and Firefox. This repo holds the full source.
 
 ## What is a browser extension?
 
-A browser extension is a small add-on that lives in your browser toolbar. Click its icon and a popup opens, so you can use a service without opening its website first. This one is a popup only: it shows a short list and every item opens the real page on Boardroomlist.com.
+A browser extension is a small add-on in your browser toolbar. Click its icon and a popup opens. This one shows a short list, and each item opens the real page on Boardroomlist.com.
 
 ## About Boardroomlist.com
 
