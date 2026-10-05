@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BoardroomList.com</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        width: 380px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        color: #121a26;
+        background: #ffffff;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 16px 18px 12px;
+        background: #0e1b2e;
+      }
+      .header img { width: 22px; height: 22px; }
+      .header span { font-weight: 800; font-size: 16px; color: #ffffff; letter-spacing: 0.01em; }
+
+      /* ---- tabs ---- */
+      .tabs {
+        display: flex;
+        background: #16263d;
+      }
+      .tab {
+        flex: 1;
+        background: none;
+        border: none;
+        font-family: inherit;
+        font-size: 12px;
+        font-weight: 700;
+        color: #b9c4d3;
+        padding: 10px 4px;
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        white-space: nowrap;
+      }
+      .tab.active { color: #ffffff; border-bottom-color: #d4ac55; }
+      .tab:hover:not(.active) { color: #ffffff; }
+
+      .body { padding: 12px 18px 18px; }
+
+      .feed-list { display: flex; flex-direction: column; gap: 10px; max-height: 400px; overflow-y: auto; }
+
+      .card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        border: 1px solid #d8dde5;
+        border-radius: 8px;
+        padding: 11px 13px;
+        background: #ffffff;
+      }
+      .card:hover { border-color: #d4ac55; background: #f7eed9; }
+      .card-top { display: flex; align-items: center; gap: 7px; margin-bottom: 5px; }
+      .badge {
+        font-size: 11px;
+        font-weight: 800;
+        color: #7f5f1c;
+        background: #f7eed9;
+        padding: 3px 7px;
+        border-radius: 5px;
+      }
+      .card-time { font-size: 11px; font-weight: 700; color: #8b95a3; margin-left: auto; }
+      .card-title { font-size: 15px; font-weight: 800; line-height: 1.3; margin-bottom: 3px; color: #121a26; }
+      .card-meta { font-size: 12px; font-weight: 600; color: #5d6879; margin-bottom: 3px; }
+      .card-comp { font-size: 12px; font-weight: 800; color: #1e7a4f; margin-bottom: 4px; }
+      .card-teaser {
+        font-size: 12px;
+        font-weight: 500;
+        color: #5d6879;
+        line-height: 1.35;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .feed-empty, .feed-loading {
+        font-size: 13px;
+        font-weight: 600;
+        color: #8b95a3;
+        text-align: center;
+        padding: 26px 0;
+      }
+
+      .feed-more {
+        text-align: center;
+        padding: 12px 0 2px;
+        margin-top: 2px;
+        border-top: 1px solid #d8dde5;
+      }
+      .feed-more a { font-size: 13px; font-weight: 800; color: #7f5f1c; text-decoration: none; }
+      .feed-more a:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="icons/icon32.png" alt="BoardroomList.com" />
+      <span>BoardroomList.com</span>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-window="open">Open</button>
+      <button class="tab" data-window="today">New today</button>
+      <button class="tab" data-window="new">New this week</button>
+      <button class="tab" data-window="closed">Just filled</button>
+    </div>
+
+    <div class="body">
+      <div class="feed-list" id="feed-list">
+        <div class="feed-loading">Loading…</div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BoardroomList — screenshot</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0; width: 1280px; height: 800px; background: #eef1f4;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        overflow: hidden;
+      }
+      .toolbar {
+        width: 1280px; height: 76px; background: #dee1e6; border-bottom: 1px solid #c7cacf;
+        display: flex; align-items: center; padding: 0 20px; gap: 14px;
+      }
+      .nav-dot { width: 12px; height: 12px; border-radius: 50%; background: #b7bac0; }
+      .addressbar {
+        flex: 1; max-width: 640px; height: 34px; background: #ffffff; border-radius: 17px;
+        display: flex; align-items: center; padding: 0 16px; font-size: 13px; color: #3c4043;
+        box-shadow: inset 0 0 0 1px #dcdfe3;
+      }
+      .addressbar .lock { color: #1a7f37; margin-right: 8px; font-size: 12px; }
+      .toolbar-icons { display: flex; align-items: center; gap: 18px; margin-left: auto; }
+      .toolbar-icon-dot { width: 20px; height: 20px; border-radius: 4px; background: #b7bac0; }
+      .ext-icon { width: 26px; height: 26px; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.25); }
+      .ext-icon img { width: 100%; height: 100%; display: block; }
+
+      .popup-anchor { position: relative; margin: 18px 40px 0 auto; width: 380px; }
+      .popup-arrow {
+        position: absolute; top: -8px; right: 26px; width: 16px; height: 16px; background: #0e1b2e;
+        transform: rotate(45deg);
+      }
+      .popup {
+        position: relative; background: #ffffff; border-radius: 10px;
+        box-shadow: 0 8px 28px rgba(0,0,0,0.22); color: #121a26; overflow: hidden;
+      }
+      .header { display: flex; align-items: center; gap: 10px; padding: 16px 18px 12px; background: #0e1b2e; }
+      .header img { width: 22px; height: 22px; }
+      .header span { font-weight: 800; font-size: 16px; color: #ffffff; }
+      .tabs { display: flex; background: #16263d; }
+      .tab {
+        flex: 1; text-align: center; font-size: 12px; font-weight: 700; color: #b9c4d3;
+        padding: 10px 4px; border-bottom: 3px solid transparent;
+      }
+      .tab.active { color: #ffffff; border-bottom-color: #d4ac55; }
+      .body { padding: 12px 18px 16px; }
+      .card { border: 1px solid #d8dde5; border-radius: 8px; padding: 11px 13px; margin-bottom: 10px; }
+      .card-top { display: flex; align-items: center; gap: 7px; margin-bottom: 5px; }
+      .badge { font-size: 11px; font-weight: 800; color: #7f5f1c; background: #f7eed9; padding: 3px 7px; border-radius: 5px; }
+      .card-time { font-size: 11px; font-weight: 700; color: #8b95a3; margin-left: auto; }
+      .card-title { font-size: 15px; font-weight: 800; margin-bottom: 3px; }
+      .card-meta { font-size: 12px; font-weight: 600; color: #5d6879; margin-bottom: 3px; }
+      .card-comp { font-size: 12px; font-weight: 800; color: #1e7a4f; margin-bottom: 4px; }
+      .card-teaser { font-size: 12px; font-weight: 500; color: #5d6879; line-height: 1.35; }
+      .feed-more { text-align: center; padding-top: 10px; border-top: 1px solid #d8dde5; }
+      .feed-more span { font-size: 13px; font-weight: 800; color: #7f5f1c; }
+
+      .page-mock { width: 1280px; height: 724px; background: #ffffff; padding: 40px 60px; }
+      .page-mock .brandbar { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+      .page-mock .brandbar img { width: 28px; height: 28px; }
+      .page-mock .brandbar b { font-size: 18px; color: #0e1b2e; }
+      .page-mock h1 { font-size: 26px; color: #0e1b2e; margin: 0 0 6px; }
+      .page-mock p { font-size: 15px; color: #5d6879; margin: 0; }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <div class="nav-dot"></div>
+      <div class="nav-dot"></div>
+      <div class="addressbar"><span class="lock">&#128274;</span>boardroomlist.com/roles</div>
+      <div class="toolbar-icons">
+        <div class="toolbar-icon-dot"></div>
+        <div class="toolbar-icon-dot"></div>
+        <div class="ext-icon"><img src="../icons/icon32.png" alt="" /></div>
+      </div>
+    </div>
+
+    <div class="popup-anchor">
+      <div class="popup-arrow"></div>
+      <div class="popup">
+        <div class="header">
+          <img src="../icons/icon32.png" alt="BoardroomList" />
+          <span>BoardroomList.com</span>
+        </div>
+        <div class="tabs">
+          <div class="tab active">Open</div>
+          <div class="tab">New today</div>
+          <div class="tab">New this week</div>
+          <div class="tab">Just filled</div>
+        </div>
+        <div class="body">
+          <div class="card">
+            <div class="card-top"><span class="badge">C-Suite</span><span class="card-time">posted 3d ago</span></div>
+            <div class="card-title">Chief Financial Officer</div>
+            <div class="card-meta">Finance &middot; Dallas, TX</div>
+            <div class="card-comp">$280K&ndash;$340K</div>
+            <div class="card-teaser">Lead financial strategy for a $4B logistics network spanning 40 states.</div>
+          </div>
+          <div class="card">
+            <div class="card-top"><span class="badge">VP</span><span class="card-time">posted 8d ago</span></div>
+            <div class="card-title">VP, Supply Chain Operations</div>
+            <div class="card-meta">Operations &middot; Chicago, IL</div>
+            <div class="card-comp">$190K&ndash;$230K</div>
+          </div>
+          <div class="feed-more"><span>View more roles on BoardroomList.com</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-mock">
+      <div class="brandbar">
+        <img src="../icons/icon48.png" alt="BoardroomList" />
+        <b>BoardroomList.com</b>
+      </div>
+      <h1>The newest executive roles, right from your toolbar</h1>
+      <p>Open, new today, new this week, just filled &mdash; a quick sample from BoardroomList.com, updated as the site is.</p>
+    </div>
+  </body>
+</html>
